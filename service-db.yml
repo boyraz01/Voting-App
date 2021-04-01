@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: db
+spec:
+  selector:
+    app: db
+  ports:
+    - port: 5432  #port of the clusterIP service
+      targetPort: 5432  #port of the pod container port
+
+      #if you dont specify type it will create clusterIP type service 
+     
